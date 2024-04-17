@@ -7,15 +7,17 @@ const ForecastWeather = ({ forecast }) => {
   if (!forecast || !forecast.forecastday) return <div>Loading...</div>;
 
   return (
-    <div style={{ backgroundColor: '#f0f0f0', padding: '20px' }}>
-      <h4>Daily Forecast</h4>
-      <table>
+    <div className="forecast-weather-container">
+      <h4 style={{ padding: '20px', textAlign: 'center' }}>Daily Forecast</h4>
+      <table className="forecast-table">
         <thead>
           <tr>
             <th>Date</th>
             <th>Temp (High/Low)</th>
-            <th>Icon</th>
+            <th>Weather</th>
             <th>Humidity</th>
+            <th>Precipitation</th>
+            <th>UV</th>
           </tr>
         </thead>
         <tbody>
@@ -27,13 +29,14 @@ const ForecastWeather = ({ forecast }) => {
                   `${day.day.maxtemp_c}°C / ${day.day.mintemp_c}°C` : 
                   `${day.day.maxtemp_f}°F / ${day.day.mintemp_f}°F`}
               </td>
-              <td><img src={day.day.condition.icon} alt="Weather Icon" /></td>
+              <td><img src={`https:${day.day.condition.icon}`} alt="Weather Icon" style={{ width: '50px' }} /></td>
               <td>{day.day.avghumidity}%</td>
+              <td>{day.day.totalprecip_mm}mm</td>
+              <td>{day.day.uv}</td>
             </tr>
           ))}
         </tbody>
       </table>
-      {/* Removed the button as per earlier modifications */}
     </div>
   );
 };

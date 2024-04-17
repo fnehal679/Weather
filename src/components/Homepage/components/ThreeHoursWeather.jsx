@@ -8,8 +8,12 @@ const ThreeHoursWeather = ({ ip, limit }) => {
   const { unit } = useTemperature();
 
   useEffect(() => {
+    console.log(ip);
     async function fetchData() {
       const data = await fetchThreeHoursWeather(ip);
+      /* If the limit parameter is provided, 
+      use data.slice(0, limit) to intercept the first limit 
+      elements from the returned data array.*/
       if (limit) {
         setHoursData(data.slice(0, limit));
       } else {
@@ -22,7 +26,7 @@ const ThreeHoursWeather = ({ ip, limit }) => {
 
   return (
     <div className="simple-weather-container">
-      <h4>Three Hourly Weather Forecast</h4>
+      <h4 style={{ padding: '20px', textAlign: 'center' }}>Three Hourly Weather Forecast</h4>
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
         {hoursData.length > 0 ? (
           hoursData.map((hourData, index) => (

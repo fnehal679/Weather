@@ -6,19 +6,20 @@ import ThreeHoursPage from './pages/ThreeHoursPage';  // 确保此路径正确
 import Navbar from './components/NavbarAndFooter/Navbar';
 import { Footer } from './components/NavbarAndFooter/Footer';
 import { TemperatureProvider } from './contexts/TemperatureContext';
+import LocationPage from './components/LocationPage/LocationPage';
 
 function App() {
   return (
     <TemperatureProvider>
       <Router>
-        <Navbar />  {/* 添加 Navbar 组件 */}
+        <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/fivedays" element={<FiveDaysPage />} />  // 添加 /fivedays 的路由
+          <Route path="/fivedays" element={<FiveDaysPage />} /> 
           <Route path="/threehours" element={<ThreeHoursPage />} /> 
-          {/* 其他路由... */}
+          <Route path="/location" element={<LocationPage />} />
         </Routes>
-        <Footer />  {/* 添加 Footer 组件 */}
+        <Footer />
       </Router>
     </TemperatureProvider>
   );

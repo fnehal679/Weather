@@ -1,18 +1,36 @@
-// src/pages/ThreeHoursPage.jsx
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import ThreeHoursWeather from '../components/Homepage/components/ThreeHoursWeather';
-import { NavigationBar } from '../components/NavbarAndFooter/Navbar';
+import NavigationBar from '../components/NavbarAndFooter/Navbar';  // Ensure import names are correct
 import { Footer } from '../components/NavbarAndFooter/Footer';
 
 const ThreeHoursPage = () => {
-  const ip = "178.174.144.45"; 
+  const [ip, setIp] = useState(null);  // Initialize IP state
+
+  useEffect(() => {
+    // Check if the browser supports geolocation
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        // Format the location as latitude,longitude string
+        const formattedLocation = `${position.coords.latitude},${position.coords.longitude}`;
+        setIp(formattedLocation);  // Set IP to the formatted location
+      }, () => {
+        setIp('180.228.172.138');  // Default IP if geolocation fails
+      });
+    } else {
+      setIp('180.228.172.138');  // Default IP if geolocation is not supported
+    }
+  }, []);
 
   return (
     <div>
       <Container>
-        <h1>Three Hourly Forecast</h1>
-        <ThreeHoursWeather ip={ip} showAll={true} />
+        {/* Conditional rendering based on whether IP is available */}
+        {ip ? (
+          <ThreeHoursWeather ip={ip} showAll={true} />
+        ) : (
+          <p>Loading or unable to retrieve location...</p>
+        )}
       </Container>
     </div>
   );

@@ -1,9 +1,8 @@
-// src/contexts/TemperatureContext.js
-
 import React, { createContext, useContext, useState } from 'react';
 
 const TemperatureContext = createContext();
 
+//Hook 'useTemperature'. 
 export const useTemperature = () => useContext(TemperatureContext);
 
 export const TemperatureProvider = ({ children }) => {

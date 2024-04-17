@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Technical Project Description for tastetime APP
+
+> App Link
+[frontend in netlify](https://cheerful-pasca-6e4742.netlify.app/) & 
+
+## Executive Summary
+### Description of the Application
+> The weather application is a web-based task management tool designed to show users about location and weatherforcast information. Built using Reactfor frontend and [weatherapi](https://www.weatherapi.com/) for weather API. 
+
+## Operating Environment
+### Technical Architecture
+> The weather application follows a client-server architecture. The web interface is implemented using React for structure, bootstrap for styling, javascript for programming . The web interface is designed to be responsive and user-friendly, especially supporting for users who wants to check weatherforcast in computer browser.
+
+## Modules
+### Functional Overview
+> The application comprises several key modules, each serving a specific purpose for users. These modules include Home, 5 days weather forcast, 3 hours weather forcast and switch to F/C. Users can check the weatherforcast in their location.
+
+### Detailed Module Description
+#### Home
+> Users can see brief weather forecast from Homepage. And the temperature can be changed between Celsius and Fahrenheit.
+![alt text](src/assets/homepage.jpg)
+
+#### 5 days weather forcast
+> Users can see the recomendations on this page.
+![alt text](src/assets/5days.jpg)
+
+####  3 hours weather forcast
+> Users can click the link on Recipe page and Recomendations page. Users can see the details on this page.
+![alt text](src/assets/3hours.jpg)
+
+#### switch to F/C
+![alt text](src/assets/homepage.jpg)
+![alt text](src/assets/homepagef.jpg)
+
+
+## How to download and build locally
+### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
+### In the project directory, you can run:
 
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
+### Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+###  Modify environments information
+> If you want to change the APIKey, modify it  in U07-weatherapp\weather-app-js\weather-app-homework\src\api\WeatherApi.jsx
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Version Information
+> Draft version 15th Apr,2024  
+> Update the Navigation bar 17th Apr,2024  
+> Final version 27th Apr,2024
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
