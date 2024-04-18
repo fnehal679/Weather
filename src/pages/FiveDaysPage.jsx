@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
-import NavigationBar from '../components/NavbarAndFooter/Navbar'; 
-import { Footer } from '../components/NavbarAndFooter/Footer';
 import ForecastWeather from '../components/Homepage/components/ForecastWeather';
 import { fetchForecast } from '../api/WeatherApi';
 

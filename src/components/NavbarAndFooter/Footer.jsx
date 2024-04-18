@@ -1,6 +1,5 @@
 // src/components/NavbarAndFooter/Footer.js
 import React from 'react';
-import { Container } from 'react-bootstrap';
 
 export const Footer = () => (
   <footer className="bg-light text-center text-lg-start">

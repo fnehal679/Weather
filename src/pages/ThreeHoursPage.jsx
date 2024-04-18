@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import ThreeHoursWeather from '../components/Homepage/components/ThreeHoursWeather';
-import NavigationBar from '../components/NavbarAndFooter/Navbar';  // Ensure import names are correct
-import { Footer } from '../components/NavbarAndFooter/Footer';
 
 const ThreeHoursPage = () => {
   const [ip, setIp] = useState(null);  // Initialize IP state
