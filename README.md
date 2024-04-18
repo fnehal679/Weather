@@ -18,19 +18,18 @@
 ### Detailed Module Description
 #### Home
 > Users can see brief weather forecast from Homepage. And the temperature can be changed between Celsius and Fahrenheit.
-![alt text](src/assets/homepage.jpg)
+
 
 #### 5 days weather forcast
 > Users can see the recomendations on this page.
-![alt text](src/assets/5days.jpg)
+
 
 ####  3 hours weather forcast
 > Users can click the link on Recipe page and Recomendations page. Users can see the details on this page.
-![alt text](src/assets/3hours.jpg)
+
 
 #### switch to F/C
-![alt text](src/assets/homepage.jpg)
-![alt text](src/assets/homepagef.jpg)
+
 
 
 ## How to download and build locally
